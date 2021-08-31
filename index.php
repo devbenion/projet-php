@@ -6,8 +6,12 @@
         <div>
             <label class="form-label" for="Org">Organismes</label>
             <select name="Organismes" id="Org" class="form-select">
-                <?php for($i=1; $i <= 15; $i++):?>
-                    <option value="<?= $i?>">AMP (Autorité des Marchés Publics)</option>
+                <?php for($i=1; $i <= 14; $i++):?>
+                    <option value="<?= $i?>">
+                    <?php if (isset($i)): ?>
+                        <?php $lignes[$i] ?>
+                    <?php endif ?>
+                    </option>
                 <?php endfor?>
             </select>
         </div>  
